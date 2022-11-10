@@ -68,57 +68,70 @@ button:hover {
 
 
 /* Navbar */
-
 #nav-section {
-    background-color: rgb(209, 195, 195);
-    position: fixed;
-    top: 0;
-   
-    z-index: 500;
     width: 100%;
     height: 80px;
-    box-shadow: var( --box-shadow);
+    background-color: rgb(146, 90, 199);
+    position: fixed;
+    top: 0;
+    z-index: 90;
+    
 }
-
-
 
 .nav__container {
+
     display: flex;
-    width: var(--container-sm);
-    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    padding: 7px 30px;
-    /* position: absolute; */
+
+}
+.nav__links {
+    display: flex;
     
- 
 }
 
-.nav__container ul {
-    list-style: none;
+.nav__links ul{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    
 }
 
 .nav__links ul li {
-   margin-left: 20px;
+    margin-right: 3rem;
+    text-transform: capitalize;
     position: relative;
-}
-
-.nav__container li a {
-    text-decoration: none;
-    color: rgb(26, 24, 24);
-}
-
-.nav__container h6 {
-    font-family: lobster;
+    margin-right: 3rem;
    
 }
 
+#mobile {
+    /* display: flex; */
+    color: #fff;
+    display: none;
+}
 
-.nav__links li a:hover {
-    color: var(--bg-success);
+
+.nav__links li i {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.nav__links ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__links ul li a:hover {
+    color: rgb(36, 36, 56);
     transition: var(--transiton);
 }
+
+.nav__links .active {
+    color: rgb(161, 221, 63);
+}
+
 
 .nav__links li a::after {
     content: '';
@@ -127,7 +140,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--bg-success);
+    background-color: red;
     transform: scaleX(0);
     transition: transform 0.6s ease-in-out; 
 }
@@ -135,30 +148,6 @@ button:hover {
 .nav__links li a:hover::after {
     transform: scaleX(1);
 }
-
-.nav__links .active {
-    color: var(--bg-success);
-}
-
-#mobile {
-    display: flex;
-    align-items: center;
-}
-
-#mobile i {
-    font: 17px;
-    display: flex;
-    padding-left: 20px;
-    
-}
-
-/* .nav__links{
-    position: relative;
-    top: 5.6rem;
-    background-color: aqua;
-} */
-
-
 
 
 
@@ -600,7 +589,7 @@ form input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem 3rem;
+    padding: 1rem 3rem;<img src="./images/shopcoin-logo.png " width="60px" height="60px" alt="">
    
 }
 
@@ -976,6 +965,56 @@ form input {
         margin: 0 auto;
     }
 
+    #mobile {
+        display: flex;
+        color: #fff;
+        right: 5%;
+        padding-top: 2rem;
+       
+    }
+
+    .nav__container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #nav-section img {
+        position: relative;
+        top: -10rem;
+    }
+
+
+    .nav__links #menu {
+        position: relative;
+        top: 80px;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        right: -8.5rem;
+        width: 300px;
+        
+
+        
+    }
+
+    #close-bar {
+        display: none;
+    }
+
+    .nav__links ul li {
+        width: 100%;
+        line-height: 4rem;
+        background-color: rgb(25, 25, 59);
+        margin-bottom: 2px;
+    }
+
+    .nav__links ul li:hover {
+        background-color: rgb(97, 97, 206);
+        box-shadow: 10px 15px 8px rgb(0, 0, 0 0.6);
+        cursor: pointer;
+        transition: var(--transiton);
+    }
+    
+
 
     h3 {
         font-size: 30px;
@@ -1041,6 +1080,14 @@ form input {
     font-weight: 400;
 
 }
+.update-showcase {
+    height: 45vh;
+}
+
+.update__details {
+    top: 140px;
+    font-size: 16px;
+}
 
 .update__category {
     width: 340px;
@@ -1075,23 +1122,11 @@ form input {
     }
 
 
-    .nav__container {
-        width: 90%;
-        margin: 0 auto;
+    .nav__links #menu {
+      
+        right: -5rem;   
     }
 
-
-    #mobile {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav__links ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-  
 
     .container {
         width: 100%;
@@ -1105,6 +1140,8 @@ form input {
         left: 50px;
         
     }
+
+
     h3 {
         font-size: 30px;
     }
@@ -1112,8 +1149,12 @@ form input {
         font-size: 25px;
     }
 
-        .shoes {
-            grid-template-columns: 1fr;
+    .shoes {
+           display: flex;
+           flex-direction: column;
+          
+            align-items: center;
+            justify-content: center;
         }
     .shoe__category {
         width: 320px;
@@ -1122,6 +1163,8 @@ form input {
         margin-left: 20px;
       
     }
+
+   
 
     
 
@@ -1135,8 +1178,10 @@ form input {
     }
 
     .new__collections {
-    
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
     }
 
@@ -1157,7 +1202,11 @@ form input {
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .card {
@@ -1227,8 +1276,10 @@ form input {
     }
 
     .update__container {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     /* CART */
     .cart__details h1, h5  {
@@ -1236,8 +1287,10 @@ form input {
     }
 
     .cart .cart_content{
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .cart__details{
@@ -1274,7 +1327,10 @@ form input {
     /* CONTACT PAGE */
 
     .location {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
        
     }
 
@@ -1291,8 +1347,10 @@ form input {
 
 .contact {
    
-    grid-template-columns: 1fr;
-    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -1309,6 +1367,10 @@ form input {
 .contact .right {
     margin-top: 2rem;
     padding: 0 30px;
+}
+
+.copyright {
+    margin-top: 2rem;
 }
     
   
