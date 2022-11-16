@@ -221,6 +221,7 @@ button:hover {
 
 .shoe__category {
     box-shadow: 0px 10px 10px rgb(133, 126, 126);
+    background-color: rgb(204, 174, 235);
     width: 380px;
     border: none;
     border-radius: 10px;
@@ -329,6 +330,7 @@ button:hover {
     margin: 10px 0px;
     position: relative;
     box-shadow: 0px 10px 10px rgb(133, 126, 126);
+    background-color: rgb(204, 174, 235);
     
     
 }
@@ -719,6 +721,7 @@ form input {
 
 .update__category {
     box-shadow: 0px 20px 30px rgb(133, 126, 126);
+    background-color: rgb(204, 174, 235);
     width: 380px;
     border: 1px solid black;
     border-radius: 18px;
